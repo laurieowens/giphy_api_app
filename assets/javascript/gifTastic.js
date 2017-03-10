@@ -1,5 +1,5 @@
 // Starting Array of Cartoon Characters- will be added to dynamically throughout prg
- var toonGuy = ["Dopey","Mickey Mouse","Betty Boop","Donald Duck","Tweety Bird","Popeye","Felix the Cat","Olive Oyl","Fred Flintstone","Snoopy","Mr. Magoo","Charlie Brown"];
+ var toonGuy = ["Jiminy Cricket","Scrooge McDuck","Dopey","Mickey Mouse","Betty Boop","Donald Duck","Tweety Bird","Popeye","Felix the Cat","Olive Oyl","Fred Flintstone","Snoopy","Mr. Magoo","Charlie Brown"];
 
       function displayCartoonInfo(){
       	$("#newCartoonGuy").empty();
