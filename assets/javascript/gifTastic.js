@@ -2,6 +2,8 @@
  var toonGuy = ["Mickey Mouse","Donald Duck","Tweety Bird","Popeye","Felix the Cat","Olive Oyl","Fred Flintstone","Snoopy","Mr. Magoo","Charlie Brown"];
 
       function displayCartoonInfo(){
+      	$("#newCartoonGuy").empty();
+
       // In this case, the "this" keyword refers to the button that was clicked
       var toonGuy1 = $(this).attr("data-name");
 		// Combine the input with the URL in prep to make the call
@@ -14,18 +16,17 @@
 		})
 // After data comes back from the request
 		.done(function(response) {
-		console.log(queryURL);
-		console.log(response);
 		// storing the data from the AJAX request in the results variable
 		var toonResults = response.data;
 		// Looping through each result item
-		$("#newCartoonGuy").empty();
+	//$("#newCartoonGuy").empty();
 		for (var i = 0; i < toonResults.length; i++) {
 		// Creating and storing a div tag
 		var toonDiv = $("<div>");
 		toonDiv.addClass("rateTag");
 			// Creating a paragraph tag with the result item's rating
 			var p = $("<p>").text("Rating: " + toonResults[i].rating);
+			
 				// Creating and storing an image tag
 				var toonImage = $("<img>");
 				// Setting the src attribute of the image to a property pulled off the result item
@@ -43,7 +44,7 @@
 		
 	
 
-	// Function for displaying movie data
+	//add Button for Cartoon Character
       function renderButtons() {
 
         // Deleting the movie buttons prior to adding new movie buttons
@@ -75,8 +76,10 @@
         // This line will grab the text from the input box
         var toonGuy1 = $("#cartoonCharacter").val().trim();
         // The movie from the textbox is then added to our array
+        if (toonGuy1 !=="") {
         toonGuy.push(toonGuy1);
         console.log(toonGuy);
+    }
 
         // calling renderButtons which handles the processing of our movie array
         renderButtons();

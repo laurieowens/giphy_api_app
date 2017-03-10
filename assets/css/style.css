@@ -1,17 +1,20 @@
-html, body{
-	background: grey;
+html, body {
+	background: url("../images/ep_naturalblack.png") no-repeat;
+	background-size: 100%;
+	
 }
-/*.maincontainer{
-position: relative;
-width: 100%;
-align-items: center;
-justify-content: space-around;
-border: solid black;
-}*/
-.charToonBtn{
-	position: relative;
-	float: left;
-	background: solid;
+.cartoon {
+	width: 150px;
+	padding: 5px;
+	font-weight: bold;
+	border: 2px solid;
+	border-radius: 10px;
+	background: #7fffd4;
+	font-size: 17px;
+	font-family: cursive;
+
+
+
 }
 .toonImages{
 	margin: 0;
@@ -19,14 +22,19 @@ border: solid black;
 	width: 1000px;
 	background: #ffe4b5;
 	border: solid white;
-	height: 475px;
-	bottom: -275px;	
+	height: 500px;
+	bottom: -250px;	
 }
-
+h1 {
+	text-align: center;
+	font-size: 36px;
+	font-family: cursive;
+	color: #ffe4b5;
+}
 h3 {
 	text-align: center;
 	font-size: 20px;
-	font-family: helvetica;
+	font-family: cursive;
 	color: #ffe4b5;
 }
 
@@ -56,12 +64,17 @@ h3 {
 	height: 400px;
 	width: 300px;
 	float: right;
-	bottom: -275px;	
+	bottom: -250px;	
 
 }
 
 .rateTag {
 	float: left;
+	text-align: center;
+	padding: none;
+	margin: none;
+	font-family: cursive;
+
 }
 
 img {
