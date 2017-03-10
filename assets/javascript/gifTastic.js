@@ -21,6 +21,10 @@
 		// Looping through each result item
 	//$("#newCartoonGuy").empty();
 		for (var i = 0; i < toonResults.length; i++) {
+
+
+  if (toonResults[i].rating !== "r" && toonResults[i].rating !== "pg-13") {
+
 		// Creating and storing a div tag
 		var toonDiv = $("<div>");
 		toonDiv.addClass("rateTag");
@@ -36,6 +40,7 @@
 				toonDiv.append(p);
 				$("#newCartoonGuy").prepend(toonDiv);
 				console.log(toonDiv);
+      }
 				}
 			});
 
