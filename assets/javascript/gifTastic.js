@@ -5,7 +5,7 @@
       // In this case, the "this" keyword refers to the button that was clicked
       var toonGuy1 = $(this).attr("data-name");
 		// Combine the input with the URL in prep to make the call
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
 		toonGuy1 + "&api_key=dc6zaTOxFJmzC&limit=10";
 		// Ajax Call to get toonGuy1
 		$.ajax({
