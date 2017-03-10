@@ -24,6 +24,7 @@ html, body {
 	border: solid white;
 	height: 500px;
 	bottom: -250px;	
+	border-radius: 10px;
 }
 h1 {
 	text-align: center;
@@ -49,13 +50,15 @@ h3 {
 	border: solid #ffe4b5;
 	color: black;
 	font-weight: bold;
+	border-radius: 10px;
 }
 
 #cartoonCharacter {   
 	border:solid #ffe4b5;
 	width: 270px;
 	height: 30px;
-	font-size: 20px;	
+	font-size: 20px;
+	border-radius: 10px;	
 	
 }
 
@@ -82,6 +85,7 @@ img {
  	height: 170px;
  	padding: 5px;
  	margin: 5px;
+ 	border-radius: 10px;
  	border: solid white;
  } 
 
