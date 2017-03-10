@@ -1,5 +1,5 @@
 // Starting Array of Cartoon Characters- will be added to dynamically throughout prg
- var toonGuy = ["Jiminy Cricket","Scrooge McDuck","Dopey","Mickey Mouse","Betty Boop","Donald Duck","Tweety Bird","Popeye","Felix the Cat","Olive Oyl","Fred Flintstone","Snoopy","Mr. Magoo","Charlie Brown"];
+ var toonGuy = ["Jiminy Cricket","Scrooge McDuck","Dopey","Lucy Van Pelt","Mickey Mouse","Betty Boop","Donald Duck","Tweety Bird","Popeye","Felix the Cat","Olive Oyl","Fred Flintstone","Snoopy","Mr. Magoo","Charlie Brown"];
 
       function displayCartoonInfo(){
       	$("#newCartoonGuy").empty();
@@ -56,6 +56,7 @@
         // (this is necessary otherwise we will have repeat buttons)
         $("#toonButton").empty();
 
+
         // Looping through the array of movies
         for (var i = 0; i < toonGuy.length; i++) {
 
@@ -83,7 +84,7 @@
         // The movie from the textbox is then added to our array
         if (toonGuy1 !=="") {
         toonGuy.push(toonGuy1);
-        console.log(toonGuy);
+      
     }
 
         // calling renderButtons which handles the processing of our movie array
