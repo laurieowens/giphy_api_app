@@ -34,7 +34,15 @@
 				// Creating and storing an image tag
 				var toonImage = $("<img>");
 				// Setting the src attribute of the image to a property pulled off the result item
-				toonImage.attr("src", toonResults[i].images.fixed_height_small_still.url);
+				toonImage.attr({
+          src: toonResults[i].images.fixed_height_still.url,
+          "data-animate": toonResults[i].images.fixed_height.url,
+          "data-still": toonResults[i].images.fixed_height_still.url,
+          "data-state": "still"
+
+
+        }); 
+        
 				// Appending the paragraph and image tag to the toonDiv 
 				toonDiv.append(toonImage);
 				toonDiv.append(p);
@@ -69,6 +77,8 @@
           a.attr("data-name", toonGuy[i]);
           // Providing the button's text with a value of the movie at index i
           a.text(toonGuy[i]);
+          //a.attr("data-state",toonGuy[i]);
+         
           // Adding the button to the HTML
           $("#toonButton").append(a);
         }
@@ -94,8 +104,23 @@
  $(document).on("click", ".cartoon", displayCartoonInfo);
 renderButtons();
 
-
-
+$(document).on("click","img", function() {
+  //console.log(cartoon);
+      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+      var state = $(this).attr("data-state");
+      
+      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+      // Then, set the image's data-state to animate
+      // Else set src to the data-still value
+      if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+        
+      } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    });
 
 
 
